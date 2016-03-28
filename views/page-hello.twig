@@ -1,0 +1,12 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+    <h1>hello {{ name | upper }}!</h1>
+
+    <ul>
+    {% for x in count %}
+        <li>{{ x }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,10 +1,6 @@
-flight-phpactiverecord-twig
+flight-twig-template
 ===========================
 
-Just a small project where I demonstrate Flight together with php-activerecord and Twig. A more in depth guide is available at [http://marcusolsson.me/2013/03/07/snabbstarta-ditt-projekt-med-flight-php-activerecord-och-twig](http://marcusolsson.me/2013/03/07/snabbstarta-ditt-projekt-med-flight-php-activerecord-och-twig) (in Swedish).
+Simple FlightPHP + Twig tiny stack ready to use to build quickly small websites.
 
-You have to run composer:
-
-```
-$ php composer.phar install
-```
+Based on [flight-phpactiverecord-twig](https://github.com/olssonm/flight-phpactiverecord-twig)
