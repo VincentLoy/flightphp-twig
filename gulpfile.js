@@ -101,7 +101,7 @@
                 presets: ['babel-preset-es2015']
             }))
             .pipe(uglify())
-            .pipe(concat('script.js'))
+            .pipe(concat('app.js'))
             .pipe(sourcemaps.write('./'))
             .pipe(gulp.dest(targetDistDir + 'js/'))
             .pipe(browserSync.reload({
@@ -118,14 +118,13 @@
     // Keep an eye on Less
     gulp.task('serve', function () {
         browserSync.init({
-            server: {
-                open: false,
-                proxy: 'http://flight-twig' // local dev ip or vhost
-            }
+            open: true,
+            proxy: 'flight-twig' // local dev ip or vhost
         });
 
         gulp.watch('*/**/*.less', ['build:less:min']);
-        gulp.watch('index.html').on('change', browserSync.reload);
+        gulp.watch('*/**/*.js', ['build:es6']);
+        gulp.watch(['*/**/*.html', '*/**/*.twig']).on('change', browserSync.reload);
     });
 
     // What tasks does running gulp trigger?
